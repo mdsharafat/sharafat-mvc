@@ -1,4 +1,4 @@
-<!-- <?php include "inc/header.php"; ?> -->
+<?php include "inc/header.php"; ?>
 <?php
 
 ini_set('display_errors', 1);
@@ -9,4 +9,4 @@ include_once "../system/init.php";
 
 
 ?>
-<!-- <?php include "inc/footer.php"; ?> -->
+<?php include "inc/footer.php"; ?>
