@@ -1,11 +1,11 @@
-</div>
+	</div>
 
-  <footer class="footeroption">
+  	<footer class="footeroption">
 	  <section class="footerone">
-		<p>Md Sharafat Hossain</p>
-		<p>IT Professional</p>
+		<p>Md Sharafat Hossain @ <a href="https://cybersoftbd.net/" target="__blank">cybersoft</a></p>
+		<p>IT Professional, Software Engineer</p>
 		</section>
-  </footer>
-
+  	</footer>
+</div>
 </body>
 </html>

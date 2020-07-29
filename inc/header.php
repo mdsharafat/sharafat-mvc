@@ -4,11 +4,12 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>Simlpe MVC Fremework</title>
 <style>
-body {font-family: arial;font-size: 15px;line-height: 18px;margin: 0 auto;width: 850px;background:#EEEEEE}
+body {background-image: url('img/bg.jpg'); background-attachment: fixed; background-size: cover;background-repeat: no-repeat; background-position: center center; font-family: arial;font-size: 15px;line-height: 18px; width: 100%; display: block; overflow: hidden;}
+.wrapper {width: 850px; margin: 0 auto; display: block;}
 a{color:#3399FF;}
-.headeroption {background: #fff; box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1); height: 74px;overflow: hidden; text-align: center; margin-top: 20px;}
+.headeroption {background: #fff; box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1); height: 74px;overflow: hidden; text-align: center; margin-top: 5px;}
 .headeroption h2{color: #000;font-size: 30px;padding-top: 2px;text-shadow: 0 1px 1px #fff;}
-.content{background: #fff;box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);font-size: 16px;line-height: 22px;margin-bottom: 3px;margin-top: 3px;min-height: 380px;overflow: hidden;padding: 10px;}
+.content{background: #fff;box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);font-size: 16px;line-height: 22px;margin-bottom: 3px;margin-top: 3px;min-height: 425px;overflow: hidden;padding: 10px;}
 
 .subject {border-bottom: 1px solid #3399ff;font-size: 20px;margin-bottom: 10px;padding-bottom: 10px;}
 .subject p{margin:0;}
@@ -29,13 +30,14 @@ input[type="text"] {border:1px solid #ddd;margin-bottom:5px;padding:5px;width:22
 input[type="submit"]{cursor: pointer}
 
 .footeroption{background: #fff; height:90px;box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);overflow:hidden;padding-top:10px;}
-.footerone {background: #fff; box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);border-radius: 5px;font-size:18px;line-height:33px;margin: 0 auto;padding:6px 10px;text-align:center;text-shadow: 1px 0 2px #fff;width: 90%;overflow: hidden;}
+.footerone {background: #fff; box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);border-radius: 5px;font-size:18px;line-height:30px;margin: 0 auto;padding:6px 10px;text-align:center;text-shadow: 1px 0 2px #fff;width: 90%;overflow: hidden;}
 .footerone p{margin:0;}
 </style>
 </head>
 <body>
+<div class="wrapper">
   <header class="headeroption">
     <h2>Simlpe MVC Fremework</h2>
 
   </header>
-<div class="content">
+  <div class="content">
