@@ -16,7 +16,21 @@
  {
     public function __construct()
     {
-        echo "I am Route Class";
+        $url = $this->url();
+        echo "<pre>";
+        print_r($url);
+        echo "</pre>";
+    }
+
+    public function url()
+    {
+        if(isset($_GET['url'])){
+            $url = $_GET['url'];
+            $url = rtrim($url); // remove extra spaces on right side
+            $url = filter_var($url, FILTER_SANITIZE_URL); // remove special character
+            $url = explode("/", $url);
+            return $url;
+        }
     }
  }
 
