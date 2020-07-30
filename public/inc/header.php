@@ -4,10 +4,10 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>Simlpe MVC Fremework</title>
 <style>
-body {background-image: url('assets/img/bg.jpg'); background-attachment: fixed; background-size: cover;background-repeat: no-repeat; background-position: center center; font-family: arial;font-size: 15px;line-height: 18px; width: 100%; display: block; overflow: hidden;}
+body { background-image: linear-gradient(#fdfbfb, #ebedee); box-shadow: inset 0 0 100px hsla(0,0%,0%,.3); font-family: arial;font-size: 15px;line-height: 18px; width: 100%; display: block; overflow: hidden; margin: 0px;}
 .wrapper {width: 1024px; margin: 0 auto; display: block;}
 a{color:#3399FF;}
-.headeroption {background: #fff; box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1); height: 74px;overflow: hidden; text-align: center; margin-top: 5px;}
+.headeroption {background: #fff; box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1); height: 74px;overflow: hidden; text-align: center;}
 .headeroption h2{color: #000;font-size: 30px;padding-top: 2px;text-shadow: 0 1px 1px #fff;}
 .content{background: #fff;box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);font-size: 16px;line-height: 22px;margin-bottom: 3px;margin-top: 3px;min-height: 425px;overflow: hidden;padding: 10px;}
 
