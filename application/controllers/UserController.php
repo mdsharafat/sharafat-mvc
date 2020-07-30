@@ -16,13 +16,19 @@ class UserController extends Framework
 {
     public function index()
     {
-        $my_model = $this->model("User");
-        if($my_model->myData()){
-            echo "<pre>";
-            print_r($my_model->myData());
-            echo "</pre>";
-        } else {
-            echo "Unable to insert data";
+        return $this->view("user_view");
+    }
+
+    public function create()
+    {
+        $name  = $this->input('name');
+        $age   = $this->input('age');
+        $email = $this->input('email');
+        $model = $this->model("User");
+        if($model->createNewUser($name, $age, $email)){
+            echo "User Data Inserted Successfully";
+        }else {
+            echo "Sorry!!! Something Went Wrong";
         }
     }
 

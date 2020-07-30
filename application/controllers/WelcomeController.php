@@ -14,7 +14,7 @@ class WelcomeController
 {
     public function index()
     {
-        echo "I am welcome controller";
+        echo '<h1 style="color: green; text-align: center;">Welcome To Simple MVC</h1>';
     }
 
 }

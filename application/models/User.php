@@ -2,15 +2,11 @@
 
 class User extends Database
 {
-    public function myData()
+    public function createNewUser($name = null, $age = null, $email = null)
     {
-        $name  = "Sohan";
-        $age   = 30;
-        $email = "sohan@test.com";
-
-        $sql = "SELECT * FROM users";
-        if($this->query($sql)){
-            return $this->fetchAll();
+        $sql = "INSERT INTO users (name, age, email) VALUES (?,?,?)";
+        if($this->query($sql, [$name, $age, $email])){
+            return true;
         }else {
             return false;
         }
