@@ -1,4 +1,4 @@
-<h2>User Registration Form</h2>
+<?php include "inc/header.php"; ?>
 
 <form action="<?php echo BASE_URL; ?>/UserController/create" method="POST">
     <table>
@@ -20,3 +20,8 @@
         </tr>
     </table>
 </form>
+
+
+
+
+<?php include "inc/footer.php"; ?>

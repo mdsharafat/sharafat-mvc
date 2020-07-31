@@ -3,6 +3,8 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>Simlpe MVC Fremework</title>
+  <?php linkCss("assets/css/test.css"); ?>
+  <?php linkJs("assets/js/app.js"); ?>
 <style>
 body { background-image: linear-gradient(#fdfbfb, #ebedee); box-shadow: inset 0 0 100px hsla(0,0%,0%,.3); font-family: arial;font-size: 15px;line-height: 18px; width: 100%; display: block; overflow: hidden; margin: 0px;}
 .wrapper {width: 1024px; margin: 0 auto; display: block;}

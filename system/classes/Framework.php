@@ -30,6 +30,15 @@ class Framework
         }
     }
 
+    public function helper($helperName)
+    {
+        if(file_exists("../system/helpers/".$helperName.".php")){
+            require_once "../system/helpers/".$helperName.".php";
+        }else {
+            echo '<h1 style="color: red; text-align: center; margin-top: 10px;">Helper function '.$helperName.' not found.</h1>';
+        }
+    }
+
 }
 
 
