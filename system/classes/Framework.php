@@ -24,9 +24,9 @@ class Framework
     public function input($input_name)
     {
         if($_SERVER['REQUEST_METHOD'] == "POST" || $_SERVER['REQUEST_METHOD'] == "post"){
-            return trim($_POST[$input_name]);
+            return trim(strip_tags($_POST[$input_name]));
         }else if($_SERVER['REQUEST_METHOD'] == "GET" || $_SERVER['REQUEST_METHOD'] == "get") {
-            return trim($_GET[$input_name]);
+            return trim(strip_tags($_GET[$input_name]));
         }
     }
 
