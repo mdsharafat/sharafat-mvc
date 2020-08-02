@@ -1,4 +1,9 @@
 <?php include "components/header.php"; ?>
+
+<?php
+  Session::flash('registration_message', 'alert alert-success');
+?>
+
 <form action="<?php echo BASE_URL; ?>/UserController/create" method="POST">
       <div class="container">
         <h2 class="text-center">Login</h2>

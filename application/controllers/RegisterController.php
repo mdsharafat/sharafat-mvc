@@ -52,7 +52,8 @@ class RegisterController extends Framework
             $password = password_hash($user_data['password'], PASSWORD_DEFAULT);
             $data = [$user_data['name'], $user_data['email'], $password];
             if($this->user_model->createNewUser($data)){
-                echo "Registration completed successfully";
+                Session::setFlash('registration_message', 'Registration successfull.');
+                return $this->view("login");
             }
 
         }else {

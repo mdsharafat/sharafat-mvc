@@ -39,6 +39,20 @@ class Framework
         }
     }
 
+    public function setSession($session_name, $session_value)
+    {
+        if(!empty($session_name) && !empty($session_value)){
+            $_SESSION[$session_name] = $session_value;
+        }
+    }
+
+    public function getSession($session_name)
+    {
+        if(!empty($session_name)){
+            return $_SESSION[$session_name];
+        }
+    }
+
 }
 
 
