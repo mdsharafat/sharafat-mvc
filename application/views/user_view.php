@@ -21,7 +21,4 @@
     </table>
 </form>
 
-
-
-
 <?php include "inc/footer.php"; ?>
