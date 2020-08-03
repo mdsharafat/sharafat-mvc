@@ -25,16 +25,10 @@
           <div class="col-md-6">
               <label for="age"><b>Age</b></label>
               <input type="number" placeholder="Enter Age" name="age" id="age">
-              <div class="error">
-                <?php if(!empty($data['age_error'])) : echo $data['age_error']; endif; ?>
-              </div>
           </div>
           <div class="col-md-6">
               <label for="city"><b>City</b></label>
               <input type="text" placeholder="Enter City" name="city" id="city">
-              <div class="error">
-                <?php if(!empty($data['city_error'])) : echo $data['city_error']; endif; ?>
-              </div>
           </div>
         </div>
 
