@@ -17,20 +17,28 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarColor01">
-    <!-- <?php if(empty(Session::get('user_id'))) : ?> -->
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+  <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="<?php echo BASE_URL;?>/WelcomeController">Home</a>
           </li>
+    <?php if(empty(Session::get('user_id'))) : ?>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo BASE_URL;?>/RegisterController">Registration</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo BASE_URL;?>/LoginController">Login</a>
           </li>
-        </ul>
-    <!-- <?php endif; ?> -->
 
+    <?php else: ?>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo BASE_URL;?>/MemberController/create">Add Member</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo BASE_URL;?>/MemberController/index">Manage Member</a>
+          </li>
+
+    <?php endif; ?>
+      </ul>
     <?php if(!empty(Session::get('user_id'))) : ?>
       <ul class="ml-auto my-2 my-lg-0" style="list-style: none;">
         <li> <a href="<?php echo BASE_URL;?>/LoginController/logout" class="btn btn-success">Logout</a> </li>

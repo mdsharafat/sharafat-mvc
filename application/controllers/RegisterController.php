@@ -4,6 +4,9 @@ class RegisterController extends Framework
 {
     public function __construct()
     {
+        if(Session::get("user_id") != false){
+            $this->redirect("ProfileController");
+        }
         $this->helper("Link");
         $this->user_model = $this->model("User");
     }

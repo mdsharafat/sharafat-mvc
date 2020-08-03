@@ -10,11 +10,16 @@
  * @version    1.0.1
  */
 
-class WelcomeController
+class WelcomeController extends Framework
 {
+    public function __construct()
+    {
+        $this->helper("Link");
+    }
+
     public function index()
     {
-        echo '<h1 style="color: green; text-align: center;">Welcome To Simple MVC</h1>';
+        $this->view("welcome");
     }
 
 }
