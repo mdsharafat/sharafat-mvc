@@ -13,13 +13,30 @@ class User extends Database
         }
     }
 
-    public function createNewUser($data)
+    public function register($data)
     {
         $sql = "INSERT INTO users (name, email, password) VALUES (?,?,?)";
         if($this->query($sql, $data)){
             return true;
         }else {
             return false;
+        }
+    }
+
+    public function login($email, $password)
+    {
+        $sql = "SELECT * FROM users WHERE email = ? ";
+        if($this->query($sql, [$email])){
+            if($this->rowCount() > 0){
+                $row         = $this->fetch();
+                if(password_verify($password, $row->password)){
+                    return ['status_code' => 'ok', 'data' => $row->id];
+                }else {
+                    return ['status_code' => 'password_not_match'];
+                }
+            }else {
+                return ['status_code' => 'email_not_found'];
+            }
         }
     }
 }

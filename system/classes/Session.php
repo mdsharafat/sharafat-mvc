@@ -7,10 +7,6 @@
 
  class Session
  {
-    public static function init()
-    {
-        session_start();
-    }
 
     public static function set($session_name, $session_value)
     {

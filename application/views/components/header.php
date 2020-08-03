@@ -10,7 +10,6 @@
 <body>
 <div class="wrapper">
   <header class="headeroption">
-    <!-- <h2>Simlpe MVC Fremework</h2> -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <a class="navbar-brand" href="#">Sharafat MVC</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,17 +17,26 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarColor01">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<?php echo BASE_URL;?>/RegisterController">Registration</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<?php echo BASE_URL;?>/LoginController">Login</a>
-      </li>
-    </ul>
+    <!-- <?php if(empty(Session::get('user_id'))) : ?> -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo BASE_URL;?>/RegisterController">Registration</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo BASE_URL;?>/LoginController">Login</a>
+          </li>
+        </ul>
+    <!-- <?php endif; ?> -->
+
+    <?php if(!empty(Session::get('user_id'))) : ?>
+      <ul class="ml-auto my-2 my-lg-0" style="list-style: none;">
+        <li> <a href="<?php echo BASE_URL;?>/LoginController/logout" class="btn btn-success">Logout</a> </li>
+      </ul>
+    <?php endif; ?>
+
   </div>
 </nav>
   </header>

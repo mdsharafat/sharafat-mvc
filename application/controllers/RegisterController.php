@@ -50,10 +50,10 @@ class RegisterController extends Framework
 
         if(empty($user_data['name_error']) && empty($user_data['email_error']) && empty($user_data['password_error']) && empty($user_data['password_repeat_error'])){
             $password = password_hash($user_data['password'], PASSWORD_DEFAULT);
-            $data = [$user_data['name'], $user_data['email'], $password];
-            if($this->user_model->createNewUser($data)){
+            $data     = [$user_data['name'], $user_data['email'], $password];
+            if($this->user_model->register($data)){
                 Session::setFlash('registration_message', 'Registration successfull.');
-                return $this->view("login");
+                $this->redirect("LoginController/index");
             }
 
         }else {
